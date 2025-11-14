@@ -301,7 +301,7 @@ spec:
           values: ["c", "m", "r"]  # Compute, Memory, or General purpose instances
         - key: karpenter.k8s.aws/instance-generation
           operator: Gt
-          values: ["2"]  # Only instance generations > 2 (e.g., m5, m6, not m4)
+          values: ["5"]  # Only instance generations > 2 (e.g., m5, m6, not m4)
       
       # Taints: Prevent pods without matching tolerations from scheduling here
       # This ensures only workloads that explicitly tolerate "workload=karpenter" can run
